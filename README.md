@@ -1,4 +1,4 @@
-# vue-project
+# vue-todolist
 
 > A Vue.js project
 
