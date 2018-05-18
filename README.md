@@ -1,8 +1,8 @@
-# vue-todolist
+# vue-project
 
-> A Vue.js project
+> 这是本人仿照[慕课网视频](https://www.imooc.com/learn/694) 做的一个简单的 todolist-demo。
 
-## Build Setup
+## 1.下载安装
 
 ``` bash
 # install dependencies
@@ -13,9 +13,7 @@ npm run dev
 
 # build for production with minification
 npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
 ```
+## 2.参考图片
+![todolist](./img.png)
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
