@@ -3,6 +3,7 @@
     <h2 class="pageTitle tc">{{ pageTitle }}</h2>
 		<p class="tc"><input class="userInput" placeholder="Add a new todo here..." v-model="newTodo" @keyup.enter="addNewTodo"></p>
     <ul>
+<<<<<<< HEAD
 			<li class="todo-item" v-for="(todo,index) in todolists" 
 					v-bind:key="todo.id" 
 					>
@@ -10,6 +11,15 @@
 				<span :class="{finished: todo.finished}">{{ todo.label }}</span>
 				<span v-show="todo.finished" class="tag-warn">finished</span>
 				<span class="deleteBtn" @click="deleteTodo(index)">delete</span>
+=======
+			<li v-for="(todo,index) in todolists" 
+					v-bind:key="todo.id" 
+					@mouseover="todo.isShowDeleteBtn = 1" @mouseout="todo.isShowDeleteBtn = 0">
+				<input type="checkbox" v-model="todo.finished"> 
+				<span :class="{finished: todo.finished}">{{ todo.label }}</span>
+				<span v-show="todo.finished" class="tag-warn">finished</span>
+				<span v-show="todo.isShowDeleteBtn" class="deleteBtn" @click="deleteTodo(index)">delete</span>
+>>>>>>> 61121fe3d633adb9f40b3fdb9df097b5c5304182
 			</li>
 		</ul>
   </div>
@@ -26,7 +36,11 @@ export default {
 			pageTitle: 'TODO LIST',
 			newTodo: '',
 			todolists: Store.fetch(),
+<<<<<<< HEAD
 			isShowDeleteBtn: 0
+=======
+			aa: 0
+>>>>>>> 61121fe3d633adb9f40b3fdb9df097b5c5304182
     }
 	},
 	watch: {
@@ -80,7 +94,11 @@ ul{
 .tag-warn{
 	color: #fff;
 	background-color: red;
+<<<<<<< HEAD
 	border-radius: 3px;
+=======
+	border-radius: 2px;
+>>>>>>> 61121fe3d633adb9f40b3fdb9df097b5c5304182
 	font-size: 12px;
 	padding: 1px 5px;
 	margin-left: 8px;
@@ -110,9 +128,12 @@ ul{
 	font-family: Arial, Helvetica, sans-serif;
 	padding-left: 5px;
 	cursor: pointer;
+<<<<<<< HEAD
 	display: none;
 }
 .todo-item:hover .deleteBtn{
 	display: inline-block;
+=======
+>>>>>>> 61121fe3d633adb9f40b3fdb9df097b5c5304182
 }
 </style>
